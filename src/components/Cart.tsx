@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { PageContext } from 'contexts/pageContext';
-import CartItem from './CartItem';
 import { PageConfig } from 'constants/pages';
+import CartItem from 'components/CartItem';
 import * as Types from 'constants/actionTypes';
 //material ui
 import { useMediaQuery, useTheme } from '@material-ui/core';
@@ -60,6 +60,9 @@ const useStyles = makeStyles(matches => ({
   }
 }));
 
+/**
+ * Cart component
+ */
 const Cart: React.FC = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('md'));
@@ -70,15 +73,20 @@ const Cart: React.FC = () => {
     0
   );
 
+  /**
+   * User on click clear cart
+   */
   const handleOnReset = () => {
     cart.dispatch({
       type: Types.INITIATE_SETTING
     });
   };
 
+  // item added in the cart
   const cartItems = cart.state.items.map(i => (
     <CartItem item={i} key={`cart-item-${i.productName}`} />
   ));
+
   return (
     <Paper className={classes.container}>
       <div className={classes.titileContainer}>
@@ -91,7 +99,7 @@ const Cart: React.FC = () => {
           onClick={handleOnReset}
           data-testid="clear-cart"
         >
-          Clear
+          {PageConfig.cartClearBtn}
         </Button>
       </div>
 
@@ -105,7 +113,7 @@ const Cart: React.FC = () => {
               variant="outlined"
               color="secondary"
             >
-              Checkout
+              {PageConfig.cartCheckoutBtn}
             </Button>
           </div>
         </div>

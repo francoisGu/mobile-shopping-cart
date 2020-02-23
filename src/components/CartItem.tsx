@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { PageContext } from 'contexts/pageContext';
 import { Product } from 'types';
+import { PageContext } from 'contexts/pageContext';
 import * as Types from 'constants/actionTypes';
 //material ui
 import { makeStyles } from '@material-ui/core/styles';
@@ -44,6 +44,7 @@ const CartItem: React.FC<Props> = (props: Props) => {
   const { cart } = useContext(PageContext);
   const { productName, number, price, productImage } = props.item;
 
+  // add amount of that current product
   const onClickAdd = () => {
     cart.dispatch({
       type: Types.CART_UPDATE_ITEM,
@@ -54,6 +55,7 @@ const CartItem: React.FC<Props> = (props: Props) => {
     });
   };
 
+  // reduce the amount and remove the item when amount <= 0
   const onClickMinus = () => {
     const item = {
       ...props.item,

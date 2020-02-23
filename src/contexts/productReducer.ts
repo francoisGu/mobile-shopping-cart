@@ -7,7 +7,7 @@ export const initState = {
 
 export const reducer = (state = initState, action: Dispatch) => {
   switch (action.type) {
-    //Get all products
+    // Get all products
     case ActionTypes.PRODUCT_GET_ALL_PRODUCTS: {
       return {
         items: action.data

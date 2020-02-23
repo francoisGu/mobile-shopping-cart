@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { PageContext } from 'contexts/pageContext';
+import { PageConfig } from 'constants/pages';
 import { Product } from 'types';
 import * as Types from 'constants/actionTypes';
 
@@ -35,11 +36,16 @@ interface Props {
   product: Product;
 }
 
+/**
+ * Product card component
+ * @param props includes product need to show in this card
+ */
 const ProductCard: React.FC<Props> = (props: Props) => {
   const classes = useStyles();
   const { cart } = useContext(PageContext);
   const { productName, productImage, price } = props.product;
 
+  // Add product into card user action
   const handleOnClick = () => {
     const item = cart.state.items.find(p => p.productName === productName) || {
       ...props.product
@@ -68,7 +74,7 @@ const ProductCard: React.FC<Props> = (props: Props) => {
             color="primary"
             variant="outlined"
           >
-            Add
+            {PageConfig.cardAddBtn}
           </Button>
         </CardActions>
       </Card>

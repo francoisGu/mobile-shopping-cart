@@ -20,6 +20,9 @@ const useStyles = makeStyles({
   }
 });
 
+/**
+ * Main layout component
+ */
 const App: React.FC<any> = _ => {
   const classes = useStyles();
   const theme = useTheme();

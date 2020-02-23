@@ -19,6 +19,12 @@ const useStyles = makeStyles({
   }
 });
 
+/**
+ * Cart drawer component. This component is for mobile view.
+ * Because the width is not enough for a cart in mobile, 
+ * the cart component will hide by a fixed button.
+ * Once the user click on the button this drawer will show.
+ */
 const CartDrawer: React.FC = () => {
   const [showCart, setShowCart] = useState(false);
   const classes = useStyles();
@@ -28,6 +34,7 @@ const CartDrawer: React.FC = () => {
     0
   );
 
+  // To show/hide the drawer
   const toggleDrawer = (open: boolean) => () => {
     setShowCart(open);
   };
