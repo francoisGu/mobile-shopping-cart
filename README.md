@@ -1,20 +1,20 @@
 # Shopping cart
 
-This is a frontend application for the shopping cart. In this application, a customer can see a range of mobile phones and add to cart. User can also update items from the cart.
+This is a frontend application for the shopping cart. In this application, a customer can see a range of mobile phones and add them to the cart. Users can also update items from the cart.
 
 ## User stories
 1. As a customer, I want to see a range of mobile phones So I can click one to add to my cart,
 2. As a customer, I want to remove items from my shopping cart So I can update my shopping cart
 
 ## Assumptions & New features
-1. An user can only add the product into the cart if the product is published.
-2. An user can add the same product multiple times.
-2. An user can add/reduce the product amount directly from the cart.
-3. An user can remove all products in the cart.
-4. An user can see the total price of the products in the cart.
-5. An user can see the empty cart message if there is no item in cart.
-6. A mobile user will see a cart icon to show the cart.
-7. A mobile user will use drawer to view the cart.
+1. A user can only add the product into the cart if the product is published.
+2. A user can add the same product multiple times.
+3. A user can add/reduce the product amount directly from the cart.
+4. A user can remove all products in the cart.
+5. A user can see the total price of the products in the cart.
+6. A user can see the empty cart message if there is no item in the cart.
+7. A mobile user will see a cart icon to show the cart.
+8. A mobile user will use a drawer to view the cart.
 
 ## Directory Structure
 
@@ -53,7 +53,7 @@ frontend
 * This application tries to use the original design in `challenge document`.
 * Responsive view works across mobile and desktop devices.
 * For mobile view, the cart will hide and show a cart icon.
-* A drawer will show if user click on the cart icon in mobile view.
+* A drawer will show if user clicks on the cart icon in the mobile view.
 
 ### Original Design
 ![Original Design](assets/origin-design.png)
@@ -68,7 +68,7 @@ frontend
 
 ## Technology used
 * This application uses `typesctipt` `react` as the framework. 
-* It uses `context api` as state management. 
 * `Testing library` as the testing tool.
+* It uses `context api` as state management. 
 * `Material UI` for UI components.
 * This application uses TDD during the implementation
