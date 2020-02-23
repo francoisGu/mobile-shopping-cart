@@ -16,12 +16,6 @@ This is a frontend application for the shopping cart. In this application, a cus
 6. A mobile user will see a cart icon to show the cart.
 7. A mobile user will use drawer to view the cart.
 
-## UI/UX
-* This application tries to use the original design in `challenge document`.
-* Responsive view works across mobile and desktop devices.
-* For mobile view, the cart will hide and show a cart icon.
-* A drawer will show if user click on the cart icon in mobile view.
-
 ## Directory Structure
 
 ```bash
@@ -54,6 +48,23 @@ frontend
 * ```npm start``` is for running the application
 * ```npm test``` is for unit testing.
 * ```npm run coverage``` is for running both unit and integration tests with coverage report.
+
+## UI/UX
+* This application tries to use the original design in `challenge document`.
+* Responsive view works across mobile and desktop devices.
+* For mobile view, the cart will hide and show a cart icon.
+* A drawer will show if user click on the cart icon in mobile view.
+
+### Original Design
+![Original Design](assets/origin-design.png)
+### Desktop view for empty cart
+![Desktop empty cart](assets/desktop-empty-cart.png)
+### Desktop view with cart items
+![Desktop empty cart](assets/desktop-with-cart-item.png)
+### Mobile view basic
+![Mobile view basic](assets/mobile-view.png)
+### Mobile view with drawer
+![Mobile with drawer](assets/mobile-cart-drawer.png)
 
 ## Technology used
 * This application uses `typesctipt` `react` as the framework. 
